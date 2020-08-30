@@ -1,6 +1,7 @@
 require_relative 'constants'
 
 class Connect4Game
+  attr_accessor :board
   def initialize
     reset_board
   end
@@ -43,8 +44,33 @@ class Connect4Game
     puts "Good luck!"
   end
 
-  def print_board
+  def game_loop
 
+  end
+
+  def print_board
+    puts '=========================='
+    puts row_string(@board[0])
+    puts '--------------------------'
+    puts row_string(@board[1])
+    puts '--------------------------'
+    puts row_string(@board[2])
+    puts '--------------------------'
+    puts row_string(@board[3])
+    puts '--------------------------'
+    puts row_string(@board[4])
+    puts '--------------------------'
+    puts row_string(@board[5])
+    puts '=========================='
+  end
+
+  def row_string(row)
+    str = '|| '
+    row.each do |elem|
+      str += (NUMBER_TO_SYMBOL[elem] + ' ')
+    end
+    str += '||'
+    str
   end
 end
 

@@ -8,9 +8,9 @@ class String
   end
 end
 
-PLAYER_1_DISC = "\u2B24".red
-PLAYER_2_DISC = "\u2B24".yellow
-EMPTY_SPACE =  	"\u25EF"
+PLAYER_1_DISC = "\u2B24".red + ' '
+PLAYER_2_DISC = "\u2B24".yellow + ' '
+EMPTY_SPACE =  	"\u2B55"
 
 NUMBER_TO_SYMBOL = {
   0 => EMPTY_SPACE,
